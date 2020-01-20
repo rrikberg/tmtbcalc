@@ -1,0 +1,149 @@
+body { 
+    background-color: #340;
+    font-family: Verdana;
+    color: #fff;
+    }
+#container {
+    margin: 0 auto;
+    width: 900px;
+    background-color: #333;
+    }
+.pitch {
+    position: relative;
+    background-color: #692;
+    border: 3px solid #fff;
+    width: 312px;
+    height: 442px;
+    }
+#hometeam{
+    float: left;
+    margin-right: 40px;
+    }
+#awayteam{
+    float: right;
+    }
+#bonuses {
+    float: left;
+    background-color: #333;
+    }
+.player{
+    position: absolute;
+    float: left;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 3px solid #fff;  
+    font-weight: bold;  
+    font-size: 10pt;
+    background-color: #333;
+    line-height: 27px;
+    text-align: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    }
+.player-inactive{
+    opacity: 0.2;
+    }
+.fw{
+    border-color: #ca0101;
+    }
+.mid{
+    border-color: #fc0;
+    }
+.def{
+    border-color: #0198fd;
+    }
+#fw1, #fw1B{
+    top: 55px;
+    left: 77px;
+    }
+#fw2, #fw2B{
+    top: 55px;
+    left: 138px;
+    }
+#fw3, #fw3B{
+    top: 55px;
+    left: 199px;
+    }
+#om1, #om1B{
+    top: 128px;
+    left: 16px;
+    }
+#om2, #om2B{
+    top: 128px;
+    left: 97px;
+    }
+#om3, #om3B{
+    top: 128px;
+    left: 178px;
+    }
+#om4, #om4B{
+    top: 128px;
+    left: 261px;
+    }
+#m1, #m1B{
+    top: 201px;
+    left: 15px;
+    }
+#m2, #m2B{
+    top: 201px;
+    left: 77px;
+    }
+#m3, #m3B{
+    top: 201px;
+    left: 138px;
+    }
+#m4, #m4B{
+    top: 201px;
+    left: 199px;
+    }
+#m5, #m5B{
+    top: 201px;
+    left: 261px;
+    }
+#dm1, #dm1B{
+    top: 274px;
+    left: 15px;
+    }
+#dm2, #dm2B{
+    top: 274px;
+    left: 97px;
+    }
+#dm3, #dm3B{
+    top: 274px;
+    left: 178px;
+    }
+#dm4, #dm4B{
+    top: 274px;
+    left: 261px;
+    }
+#d1, #d1B{
+    top: 347px;
+    left: 15px;
+    }
+#d2, #d2B{
+    top: 347px;
+    left: 77px;
+    }
+#d3, #d3B{
+    top: 347px;
+    left: 138px;
+    }
+#d4, #d4B{
+    top: 347px;
+    left: 199px;
+}
+#d5, #d5B{
+    top: 347px;
+    left: 261px;
+    }
+#info{
+    clear: both;
+    }
+#info td{
+    padding-right: 25px;
+    }
