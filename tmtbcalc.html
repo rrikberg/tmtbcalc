@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Trophy Manager Formation Bonus Calculator
+		</title>
+		<link href="css/layout.css" rel="stylesheet">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="js/tmcalc.js"></script>
+	</head>
+<body>
+<div id="container">
+    <div class="pitch "id="hometeam">
+        <div class="player fw" id="fw1">
+        FW
+        </div>
+        <div class="player fw player-inactive" id="fw2">
+        FW
+        </div>
+        <div class="player fw" id="fw3">
+        FW
+        </div>
+        <div class="player mid player-inactive" id="om1">
+        OM
+        </div>
+        <div class="player mid player-inactive" id="om2">
+        OM
+        </div>
+        <div class="player mid player-inactive" id="om3">
+        OM
+        </div>
+        <div class="player mid player-inactive" id="om4">
+        OM
+        </div>
+        <div class="player mid" id="m1">
+        M
+        </div>
+        <div class="player mid" id="m2">
+        M
+        </div>
+        <div class="player mid player-inactive" id="m3">
+        M
+        </div>
+        <div class="player mid" id="m4">
+        M
+        </div>
+        <div class="player mid" id="m5">
+        M
+        </div>
+        <div class="player mid player-inactive" id="dm1">
+        DM
+        </div>
+        <div class="player mid player-inactive" id="dm2">
+        DM
+        </div>
+        <div class="player mid player-inactive" id="dm3">
+        DM
+        </div>
+        <div class="player mid player-inactive" id="dm4">
+        DM
+        </div>
+        <div class="player def" id="d1">
+        D
+        </div>
+        <div class="player def" id="d2">
+        D
+        </div>
+        <div class="player def player-inactive" id="d3">
+        D
+        </div>
+        <div class="player def" id="d4">
+        D
+        </div>
+        <div class="player def" id="d5">
+        D
+        </div>
+    </div>
+    <div id="bonuses">
+        <table style="margin-bottom: 20px;">
+            <tr>
+                <th colspan="2">Offensive</th>
+            </tr>
+            <tr>
+                <td align="right">Short passes:</td>
+                <td id="off_sp"></td>
+            </tr>
+            <tr>
+                <td align="right">Through balls:</td>
+                <td id="off_tb"></td>
+            </tr>
+            <tr>
+                <td align="right">Direct:</td>
+                <td id="off_di"></td>
+            </tr>
+            <tr>
+                <td align="right">Long balls:</td>
+                <td id="off_lb"></td>
+            </tr>
+            <tr>
+                <td align="right">Wing attacks:</td>
+                <td id="off_wa"></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th colspan="2">Defensive</th>
+            </tr>
+            <tr>
+                <td align="right">Short passes:</td>
+                <td id="def_sp"></td>
+            </tr>
+            <tr>
+                <td align="right">Through balls:</td>
+                <td id="def_tb"></td>
+            </tr>
+            <tr>
+                <td align="right">Direct:</td>
+                <td id="def_di"></td>
+            </tr>
+            <tr>
+                <td align="right">Long balls:</td>
+                <td id="def_lb"></td>
+            </tr>
+            <tr>
+                <td align="right">Wing attacks:</td>
+                <td id="def_wa"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="pitch "id="awayteam">
+        <div class="player fw" id="fw1B">
+        FW
+        </div>
+        <div class="player fw player-inactive" id="fw2B">
+        FW
+        </div>
+        <div class="player fw" id="fw3B">
+        FW
+        </div>
+        <div class="player mid player-inactive" id="om1B">
+        OM
+        </div>
+        <div class="player mid player-inactive" id="om2B">
+        OM
+        </div>
+        <div class="player mid player-inactive" id="om3B">
+        OM
+        </div>
+        <div class="player mid player-inactive" id="om4B">
+        OM
+        </div>
+        <div class="player mid" id="m1B">
+        M
+        </div>
+        <div class="player mid" id="m2B">
+        M
+        </div>
+        <div class="player mid player-inactive" id="m3B">
+        M
+        </div>
+        <div class="player mid" id="m4B">
+        M
+        </div>
+        <div class="player mid" id="m5B">
+        M
+        </div>
+        <div class="player mid player-inactive" id="dm1B">
+        DM
+        </div>
+        <div class="player mid player-inactive" id="dm2B">
+        DM
+        </div>
+        <div class="player mid player-inactive" id="dm3B">
+        DM
+        </div>
+        <div class="player mid player-inactive" id="dm4B">
+        DM
+        </div>
+        <div class="player def" id="d1B">
+        D
+        </div>
+        <div class="player def" id="d2B">
+        D
+        </div>
+        <div class="player def player-inactive" id="d3B">
+        D
+        </div>
+        <div class="player def" id="d4B">
+        D
+        </div>
+        <div class="player def" id="d5B">
+        D
+        </div>
+    </div>
+    <div id="info">
+        <table>
+            <tr>
+                <th></th>
+                <th>Offensive</th>
+                <th>Defensive</th>
+            </tr>
+            <tr>
+                <td align="right">Short pass</td>
+                <td>Pas=Tec>Wor=Pac=Pos</td>
+                <td>Pos=Tac>Mar=Wor</td>
+            </tr>
+            <tr>
+                <td align="right">Through balls</td>
+                <td>Pac>Pas=Tec=Cro=Wor=Pos</td>
+                <td>Pac>Pos>Mar=Tac=Wor</td>
+            </tr>
+            <tr>
+                <td align="right">Direct</td>
+                <td>Pac=Tec>Pas=Wor=Pos</td>
+                <td>Mar=Wor>Pos=Pac=Tac</td>
+            </tr>
+            <tr>
+                <td align="right">Long balls</td>
+                <td>Hea>Str>Pas=Cro=Tec=Wor=Pos</td>
+                <td>Hea>Str>Pos=Mar=Tac=Wor</td>
+            </tr>
+            <tr>
+                <td align="right">Wing attacks</td>
+                <td>Pac=Cro>Tec=Wor>Str</td>
+                <td>Pac=Tac>Mar=Pos=Wor>Str</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+</div>
+</body>
+
+</html>
+
